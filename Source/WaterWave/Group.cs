@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,42 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+using System.Collections.Generic;
+
+namespace WaterWave
+{
+    public class Group
+    {
+        public Group()
+        {
+            Curves = new List<Curve>();
+            Curves2D = new List<Curve2D>();
+            Faces = new List<Face>();
+            Lines = new List<Line>();
+            Points = new List<Point>();
+            Surfaces = new List<Surface>();
+        }
+
+        public Group(string name) : this()
+        {
+            Name = name;
+        }
+
+        public virtual IList<Curve> Curves { get; protected set; }
+
+        public virtual IList<Curve2D> Curves2D { get; protected set; }
+
+        public virtual IList<Face> Faces { get; protected set; }
+
+        public virtual IList<Line> Lines { get; protected set; }
+
+        public virtual string Name { get; set; }
+
+        public virtual IList<Point> Points { get; protected set; }
+
+        public virtual IList<Surface> Surfaces { get; protected set; }
+    }
+}

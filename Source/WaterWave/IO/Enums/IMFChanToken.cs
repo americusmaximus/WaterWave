@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,41 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+namespace WaterWave.IO.Enums
+{
+    public enum IMFChanToken
+    {
+        /// <summary>
+        /// Red
+        /// </summary>
+        R,
+
+        /// <summary>
+        /// Green
+        /// </summary>
+        G,
+
+        /// <summary>
+        /// Blue
+        /// </summary>
+        B,
+
+        /// <summary>
+        /// Matte
+        /// </summary>
+        M,
+
+        /// <summary>
+        /// Luminance
+        /// </summary>
+        L,
+
+        /// <summary>
+        /// Depth
+        /// </summary>
+        Z
+    }
+}

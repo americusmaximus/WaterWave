@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+using WaterWave.IO.Enums;
+
+namespace WaterWave.IO
+{
+    public class MaterialMapState : IMaterialMapState
+    {
+        public int Index { get; set; }
+
+        public long LineNumber { get; set; }
+
+        public MaterialMap Map { get; set; }
+
+        public MaterialToken Token { get; set; }
+    }
+}

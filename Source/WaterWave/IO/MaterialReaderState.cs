@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+using System;
+using System.Linq;
+
+namespace WaterWave.IO
+{
+    public class MaterialReaderState : IMaterialReaderState
+    {
+        public MaterialReaderState(MaterialCollection collection, ILineReader reader)
+        {
+            Collection = collection ?? throw new ArgumentNullException(nameof(collection));
+            Reader = reader ?? throw new ArgumentNullException(nameof(reader));
+        }
+
+        public virtual MaterialCollection Collection { get; protected set; }
+
+        public virtual Material Material { get; set; }
+
+        protected virtual ILineReader Reader { get; set; }
+
+        public virtual string Header { get { return string.Join(Environment.NewLine, Reader.Headers.ToArray()); } }
+
+        public virtual long LineNumber { get { return Reader.LineNumber; } }
+    }
+}

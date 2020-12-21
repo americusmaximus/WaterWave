@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+
+namespace WaterWave
+{
+    public class MaterialReflectionMap
+    {
+        public virtual MaterialMap CubeBack { get; set; }
+
+        public virtual MaterialMap CubeBottom { get; set; }
+
+        public virtual MaterialMap CubeFront { get; set; }
+
+        public virtual MaterialMap CubeLeft { get; set; }
+
+        public virtual MaterialMap CubeRight { get; set; }
+
+        public virtual MaterialMap CubeTop { get; set; }
+
+        public virtual MaterialMap Sphere { get; set; }
+    }
+}

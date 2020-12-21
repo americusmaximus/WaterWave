@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+namespace WaterWave
+{
+    public class SurfaceConnection
+    {
+        public virtual CurveIndex Curve2D1 { get; set; }
+
+        public virtual CurveIndex Curve2D2 { get; set; }
+
+        public virtual int Surface1 { get; set; }
+
+        public virtual int Surface2 { get; set; }
+    }
+}

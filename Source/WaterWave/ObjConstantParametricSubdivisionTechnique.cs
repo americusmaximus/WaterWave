@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,32 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+
+namespace WaterWave
+{
+    public class ObjConstantParametricSubdivisionTechnique : IObjApproximationTechnique
+    {
+        public ObjConstantParametricSubdivisionTechnique()
+        {
+        }
+
+        public ObjConstantParametricSubdivisionTechnique(float u)
+        {
+            ResolutionU = u;
+            ResolutionV = u;
+        }
+
+        public ObjConstantParametricSubdivisionTechnique(float u, float v)
+        {
+            ResolutionU = u;
+            ResolutionV = v;
+        }
+
+        public virtual float ResolutionU { get; set; }
+
+        public virtual float ResolutionV { get; set; }
+    }
+}

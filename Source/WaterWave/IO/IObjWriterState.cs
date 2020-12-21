@@ -1,3 +1,5 @@
+﻿#region License
+/*
 MIT License
 
 Copyright (c) 2020 Americus Maximus
@@ -19,3 +21,34 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+#endregion
+
+
+namespace WaterWave.IO
+{
+    public interface IObjWriterState
+    {
+        string GroupNames { get; set; }
+
+        bool IsBevelInterpolationEnabled { get; set; }
+
+        bool IsColorInterpolationEnabled { get; set; }
+
+        bool IsDissolveInterpolationEnabled { get; set; }
+
+        int LevelOfDetail { get; set; }
+
+        string MapName { get; set; }
+
+        string MaterialName { get; set; }
+
+        int MergingGroupNumber { get; set; }
+
+        Obj Obj { get; }
+
+        string ObjectName { get; set; }
+
+        int SmoothingGroupNumber { get; set; }
+    }
+}
