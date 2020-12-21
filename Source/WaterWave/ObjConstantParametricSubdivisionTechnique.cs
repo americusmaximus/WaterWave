@@ -24,7 +24,6 @@ SOFTWARE.
 */
 #endregion
 
-
 namespace WaterWave
 {
     public class ObjConstantParametricSubdivisionTechnique : IObjApproximationTechnique
