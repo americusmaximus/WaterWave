@@ -21,4 +21,4 @@ To build the solution for only one of the target frameworks please use the follo
 Please see the CLI section of building the code under Windows.
 
 ## Use
-[Triangulator](https://github.com/americusmaximus/Triangulator) uses the library to convert height map to a .obj files.
+[Triangulator](https://github.com/americusmaximus/Triangulator) uses the library to convert height map images to Waterfront .obj files.
